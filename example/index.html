@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>reForm example</title>
+	<title>require Form example</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 
@@ -9,13 +9,18 @@
 	<script type="text/javascript" src="require.form.min.js"></script>
 	<script type="text/javascript">
 		$(window).ready(function(){
-			$('#myForm').formRequire({
-				callback: myFunction
-			});			
+			var myOptions = {
+				messageError: null, // Set your message error. Default: 'Preencha todos os campos.'.
+				typeAlertError: null, // alert or messageBox. Default: messageBox
+				messageBox: null, // Your '#div-error' Default: A box with a Default message will be created.
+				after: myCallbackFunction // Your Callback function. The default parameter is your own form.
+			};
+
+			$('#myForm').formRequire( myOptions );			
 		});
 
-		function myFunction(){
-			alert('ok');
+		function myCallbackFunction(){
+			alert('This form was submitted!');
 			return false;
 		}
 	</script>
