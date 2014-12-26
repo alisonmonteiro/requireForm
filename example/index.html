@@ -2,16 +2,19 @@
 <html>
 <head>
 	<title>reForm example</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="require.form.min.js"></script>
 	<script type="text/javascript">
 		$(window).ready(function(){
-			$('#formulario').formRequire({
-				callback: teste
+			$('#myForm').formRequire({
+				callback: myFunction
 			});			
 		});
 
-		function teste(){
+		function myFunction(){
 			alert('ok');
 			return false;
 		}
@@ -19,29 +22,42 @@
 </head>
 <body>
 	<div class="form">
-		<form class="formulario" id="formulario" method="post">
-			<label for="area">&Aacute;reas de interesse</label>
-			<input type="checkbox" name="area" id="area1" value="4" data-required="true" />Design
-			<input type="checkbox" name="area" id="area2" value="3" data-required="true" />Development
-			<Br />
-			<label for="status">Genero</label>
-			<input type="radio" name="status" id="status1" value="4" data-required="true" />M
-			<input type="radio" name="status" id="status2" value="3" data-required="true" />F
-			<Br />
-			<label for="nome">Nome*</label>
-			<input type="text" name="nome" id="nome" value="" data-required="true" autocomplete="off" />
-			<Br />
-			<label for="email">E-mail*</label>
-			<input type="email" name="email" id="email" value="" data-required="true" autocomplete="off" />
-			<Br />
-			<label for="cidade">Cidade*</label>
-			<select  name="cidade" id="cidade" data-required="true">
-				<option value="">Selecione</option>
-				<option value="fortaleza">SP</option>
-				<option value="sobral">Rio</option>
-			</select>
-			<Br />
-			<input type="submit" />
+		<h1>Require Form example</h1>
+
+		<form class="myForm" id="myForm" method="post">
+			<div class="col col-12">
+				<label for="nome">Nome*</label>
+				<input type="text" name="nome" id="nome" value="" data-required="true" autocomplete="off" />
+			</div>
+			<div class="col col-12">
+				<label for="email">E-mail*</label>
+				<input type="email" name="email" id="email" value="" data-required="true" autocomplete="off" />
+			</div>
+			<div class="col col-12">
+				<label for="status">Sexo*</label>
+				<input type="radio" name="status" id="status1" value="1" data-required="true" />Masculino &nbsp; 
+				<input type="radio" name="status" id="status2" value="0" data-required="true" />Feminino
+			</div>
+			<div class="col col-12">
+				<label for="idade">Idade*</label>
+				<input type="number" name="idade" id="idade" value="" data-required="true" autocomplete="off" />
+			</div>
+			<div class="col col-12">
+				<label for="cidade">Cidade*</label>
+				<select  name="cidade" id="cidade" data-required="true">
+					<option value="">Selecione</option>
+					<option value="1">Sao Paulo</option>
+					<option value="2">Fortaleza</option>
+					<option value="3">Sobral</option>
+					<option value="4">Brasília</option>
+				</select>
+			</div>
+			<div class="checkbox-group">
+				<input type="checkbox" name="receber_novidades" id="receber_novidades" value="4" data-required="true" />
+				<label for="receber_novidades">Desejo receber novidades.</label>&nbsp; &nbsp;
+			</div>
+		
+			<input type="submit" name="submit" value="Enviar" />
 		</form>
 	</div>
 </body>
