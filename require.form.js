@@ -2,14 +2,13 @@
  * 2014 - requireForm 
  * @author Alison Monteiro https://github.com/alisonmonteiro 
 **/
-
 ;(function() {
 	'use strict';
 
 	function log(myLog)
 	{		
 		if (window.console && console.log)
-			console.log('[formRequire] ' + myLog);
+			console.log('[requireForm] ' + myLog);
 	}
 
 	function checkLenghtOfForm(object)
@@ -43,12 +42,12 @@
 
 	/**
 	 * @param options => Object
-	 * 			messageBox => Id of the div error box.
-	 * 			after => function for the callback
-	 * 			messageError => your message error. Default: 'Preencha todos os campos.'.
-	 * 			typeAlertError => Type of alert error. 'alert' or 'messageBox'. Default: 'messageBox'
+	 * 			- messageBox => Id of the div error box.
+	 * 			- after => function for the callback
+	 * 			- messageError => your message error. Default: 'Preencha todos os campos.'.
+	 * 			- typeAlertError => Type of alert error. 'alert' or 'messageBox'. Default: 'messageBox'
 	 */
-	$.fn.formRequire = function( options )
+	$.fn.requireForm = function( options )
 	{
 		if('undefined' == typeof options){
 			var	options = {};			
