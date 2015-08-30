@@ -41,21 +41,21 @@ input[type=radio]{
 	margin: 0 5px 10px 0;
 }
 
-input[type=color],
-input[type=date],
-input[type=datetime-local],
-input[type=datetime],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=range],
-input[type=search],
-input[type=submit],
-input[type=tel],
-input[type=text],
-input[type=time],
-input[type=url],
-input[type=week],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
 select{
 	border: 1px solid #ccc;
 	background: #fff;
@@ -69,27 +69,27 @@ select{
 	border-radius: 1px;
 }
 
-input[type=color].fr-error,
-input[type=date].fr-error,
-input[type=datetime-local].fr-error,
-input[type=datetime].fr-error,
-input[type=email].fr-error,
-input[type=month].fr-error,
-input[type=number].fr-error,
-input[type=range].fr-error,
-input[type=search].fr-error,
-input[type=submit].fr-error,
-input[type=tel].fr-error,
-input[type=text].fr-error,
-input[type=time].fr-error,
-input[type=url].fr-error,
-input[type=week].fr-error,
-select.fr-error{
+input[type="color"].rf-error,
+input[type="date"].rf-error,
+input[type="datetime-local"].rf-error,
+input[type="datetime"].rf-error,
+input[type="email"].rf-error,
+input[type="month"].rf-error,
+input[type="number"].rf-error,
+input[type="range"].rf-error,
+input[type="search"].rf-error,
+input[type="submit"].rf-error,
+input[type="tel"].rf-error,
+input[type="text"].rf-error,
+input[type="time"].rf-error,
+input[type="url"].rf-error,
+input[type="week"].rf-error,
+select.rf-error{
 	border: 1px solid #C45252;
 	background: #FFEFEF;
 }
 
-.fr-error{
+.rf-error{
 	color: #C45252;
 }
 
@@ -111,7 +111,7 @@ input[type=submit]{
 	border: 0;
 }
 
-#fr-message-area{
+#rf-message-area{
 	background: #FDD8D8;
 	border: 1px solid #EBB7B7;
 	color: #B34848;

@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Exemplo de utilização - requireForm</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo de utilização - requireForm</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="require.form.min.js"></script>
-	<script type="text/javascript">
-		$(window).ready(function(){
-			var myOptions = {
-				messageError: null, // Set your message error. Default: 'Preencha todos os campos.'.
-				typeAlertError: null, // alert or messageBox. Default: messageBox
-				messageBox: null, // Your '#div-error' Default: A box with a Default message will be created.
-				after: myCallbackFunction // Your Callback function. The default parameter is your own form.
-			};
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="../require.form.js"></script>
+        <script type="text/javascript">
+            $(window).ready(function(){
+                var myOptions = {
+                    messageError: null,         // Set your message error. Default: 'Preencha todos os campos.'.
+                    typeAlertError: null,       // alert or messageBox. Default: messageBox
+                    messageBox: null,           // Your '#div-error' Default: A box with a Default message will be created.
+                    after: myCallbackFunction   // Your Callback function. The default parameter is your own form.
+                };
 
-			$('#myForm').requireForm( myOptions );			
-		});
+                $('#myForm').requireForm( myOptions );
+            });
 
-		function myCallbackFunction(){
-			alert('This form was submitted!');
-			return false;
-		}
-	</script>
-</head>
-<body>
-	<div class="form">
-		<h1>Exemplo de utilização - requireForm</h1>
+            function myCallbackFunction(){
+                alert('This form was submitted!');
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="form">
+            <h1>Exemplo de utilização - requireForm</h1>
 
-		<form class="myForm" id="myForm" method="post">
-			<div class="col col-12">
-				<label for="nome">Nome*</label>
-				<input type="text" name="nome" id="nome" value="" data-required="true" autocomplete="off" />
-			</div>
-			<div class="col col-12">
-				<label for="email">E-mail*</label>
-				<input type="email" name="email" id="email" value="" data-required="true" autocomplete="off" />
-			</div>
-			<div class="col col-12">
-				<label for="status">Sexo*</label>
-				<input type="radio" name="status" id="status1" value="1" data-required="true" />Masculino &nbsp; 
-				<input type="radio" name="status" id="status2" value="0" data-required="true" />Feminino
-			</div>
-			<div class="col col-12">
-				<label for="idade">Idade*</label>
-				<input type="number" name="idade" id="idade" value="" data-required="true" autocomplete="off" />
-			</div>
-			<div class="col col-12">
-				<label for="cidade">Cidade*</label>
-				<select  name="cidade" id="cidade" data-required="true">
-					<option value="">Selecione</option>
-					<option value="1">Sao Paulo</option>
-					<option value="2">Fortaleza</option>
-					<option value="3">Sobral</option>
-					<option value="4">Brasília</option>
-				</select>
-			</div>
-			<div class="checkbox-group">
-				<input type="checkbox" name="receber_novidades" id="receber_novidades" value="4" data-required="true" />
-				<label for="receber_novidades">Desejo receber novidades.</label>&nbsp; &nbsp;
-			</div>
-		
-			<input type="submit" name="submit" value="Enviar" />
-		</form>
-	</div>
-</body>
+            <form class="myForm" id="myForm" method="post">
+                <div class="col col-12">
+                    <label for="nome">Nome*</label>
+                    <input type="text" name="nome" id="nome" value="" data-required="true" autocomplete="off" />
+                </div>
+                <div class="col col-12">
+                    <label for="email">E-mail*</label>
+                    <input type="email" name="email" id="email" value="" data-required="true" autocomplete="off" />
+                </div>
+                <div class="col col-12">
+                    <label for="status">Sexo*</label>
+                    <input type="radio" name="status" id="status1" value="1" data-required="true" />Masculino &nbsp;
+                    <input type="radio" name="status" id="status2" value="0" data-required="true" />Feminino
+                </div>
+                <div class="col col-12">
+                    <label for="idade">Idade*</label>
+                    <input type="number" name="idade" id="idade" value="" data-required="true" autocomplete="off" />
+                </div>
+                <div class="col col-12">
+                    <label for="cidade">Cidade*</label>
+                    <select  name="cidade" id="cidade" data-required="true">
+                        <option value="">Selecione</option>
+                        <option value="1">Sao Paulo</option>
+                        <option value="2">Fortaleza</option>
+                        <option value="3">Sobral</option>
+                        <option value="4">Brasília</option>
+                    </select>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="receber_novidades" id="receber_novidades" value="4" data-required="true" />
+                    <label for="receber_novidades">Desejo receber novidades.</label>&nbsp; &nbsp;
+                </div>
+
+                <input type="submit" name="submit" value="Enviar" />
+            </form>
+        </div>
+    </body>
 </html>
